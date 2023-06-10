@@ -12,6 +12,7 @@
             this.age = age;
         }
         //定義抽象方法，繼承物件必須進行implement
+        //抽象方法只能定義在抽象類中，子類必須對抽象方法進行重寫
         abstract getLegCount(): number;
 
         sound(animalSound: string) {

@@ -10,8 +10,8 @@
         }
     }
     class Dog extends animal {
-        constructor() {
-            super("旺財", 5);
+        constructor(name, age) {
+            super(name, age);
         }
         sound() {
             super.sound("bow-wow");
