@@ -2,25 +2,23 @@
 (() => {
     class Person {
         constructor(name, age) {
-            this.name = name;
-            this.age = age;
+            this._name = name;
+            this._age = age;
         }
         getName() {
-            return this.name;
+            return this._name;
         }
         setName(nValue) {
-            this.name = nValue;
+            this._name = nValue;
         }
-        getAge() {
-            return this.age;
+        get age() {
+            console.log("get age function active!");
+            return this._age;
         }
-        setAge(nValue) {
-            if (nValue >= 0)
-                this.age = nValue;
-            else
-                this.age = 0;
+        set age(nValue) {
+            console.log("set age function active!");
+            this._age = nValue;
         }
     }
     const p = new Person("孫悟空", 30);
-    p.setAge(-30);
 })();
